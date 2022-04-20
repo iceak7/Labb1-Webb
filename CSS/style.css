@@ -1,0 +1,139 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+header{
+    height: 180px;
+    padding: 20px;
+    padding-left: 40px;
+    background-color: #00162b;
+    display: flex;
+    align-items: center;
+}
+header h1{
+    color:white;
+    font-size: 48px;
+}
+
+
+
+
+.menu-box{
+    display: none;
+}
+.menu{
+    display: flex;
+    background-color: #a5a5a5;
+}
+.menu li{
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+}
+.menu a, .menu .active{ 
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #a5a5a5;
+    padding:14px 16px;
+    text-decoration: none;
+    cursor: pointer; 
+    color: black;
+}
+.menu .active{
+    background-color: #838383;
+}
+.menu a:hover, .menu .active:hover{
+    background-color:#5e5e5e ;
+}
+.menu a:visited{
+    color:black;
+}
+
+.main-section{
+    display:flex;
+}
+
+.text-section{
+    padding:2%;
+}
+.portrait{
+    width:40%;
+    min-width: 200px;
+    max-width: 500px;
+    float: left;
+    padding-right: 2%;
+    padding-bottom: 1%;
+}
+
+.pageTitle{
+    text-align: center;
+    padding: 30px;
+}
+
+.jobItem{
+    width:90%;
+    min-height: 200px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px;
+    flex-direction: row;
+    background-color: #888888;
+}
+
+
+
+.descSection, .factSection{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background-color: #dbdada;
+    min-height: 200px;
+    margin: auto;
+}
+.factSection{
+    background-color: #888888;
+}
+
+.factBlock{
+    height: 100%;
+}
+
+
+@media(max-width:750px)  {
+    .menu{
+        display: block;
+    }
+    .menu-item{
+        display: none;
+    }
+
+
+    .menu-box:checked ~ .menu-item {
+        display: block;
+    }
+
+    .jobItem{
+        flex-direction: column;
+    }
+    .factSection{
+        width: 100%;
+    }
+    .descSection{
+        width:100%;
+        min-height: 0px;
+        padding: 5%;
+        
+    }
+    
+
+    
+}
+
+
