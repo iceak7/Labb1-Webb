@@ -21,8 +21,20 @@ header h1{
 
 
 main{
-    min-height: 600px;
+    min-height: 800px;
+    padding-bottom: 50px;
 }
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: #00162b;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 
 .menu-box{
     display: none;
@@ -101,6 +113,7 @@ main{
 }
 .factSection{
     background-color: #888888;
+    text-align: center;
 }
 
 .factBlock{
@@ -109,9 +122,101 @@ main{
 
 .portfolioMain{
     width:90%;
+    max-width: 800px;
     margin: auto;
     min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
+.portfolioItem{
+    margin-bottom: 30px;
+    display: flex;
+    height: 200px;
+    background-color: #dbdada;
+    width: 100%;
+}
+.portoflioImageContainer{
+    width: 30%;
+    padding: 2%;
+    overflow: hidden;
+}
+.portoflioImageContainer img{
+    width: auto;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    image-rendering: auto;
+}
+.portfolioInfo{
+    width: 70%;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolioInfo h2{
+    padding: 8px 0px;
+}
+
+.portfolioInfo a{
+    min-width: 100px;
+    padding: 4px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.portfolioInfo a:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    min-width: 300px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+
 
 
 .ovrigtMain{
@@ -119,15 +224,47 @@ main{
     margin: auto;
     display: flex;
 }
+
+.otherInformation{
+    width: 58%;
+    background-color: #dbdada;
+    margin-left: auto;
+    padding-top: 20px;
+    padding: 20px 3%;
+}
 .contactLinks{
-    width: 30%;
+    padding-top: 20px;
+    width: 40%;
     background-color: #888888;
-    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
 }
 .contactLinks h3{
     text-align: center;
-    padding: 10px 0px;
+    padding: 20px 0px;
 }
+.linkItem{
+    display: flex;
+    padding: 5px 5%;
+}
+.linkLogo{
+    font-weight: bold;
+    width: 35%;
+}
+.linkText{
+    width: 100%;
+}
+.linkText p, .linkText a{
+    color: black;
+}
+
+.linkText a:hover{
+    color: rgb(34, 34, 34);
+}
+
+
+
 @media(max-width:750px)  {
     .menu{
         display: block;
@@ -154,7 +291,27 @@ main{
         
     }
     
+    .ovrigtMain{
+        flex-direction: column;
+    }
+    .otherInformation{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .contactLinks{
+        width: 100%;
+    }
 
+    .portfolioItem{
+        flex-direction: column;
+    }
+    .portoflioImageContainer{
+        width: 100%;
+    }
+    .portfolioInfo{
+        width: 100%;
+        padding-top:0px;
+    }
     
 }
 
